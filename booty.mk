@@ -37,7 +37,17 @@ ifeq ($(WITH_BOOT_HTC_STUFF),true)
         HTCEditor \
         HTCGallery \
         HTCVideoPlayer
-        
+else
+    #Call all the replaced packages just in case.
+    PRODUCT_PACKAGES += \
+        Snap \
+        SnapdragonCamera \
+        MotCamera \
+        Gallery2 \
+        SnapdragonGallery
+endif
+
+ifeq ($(WITH_BOOT_HTC_STUFF),true)
     PRODUCT_COPY_FILES += \
         #Copying camera libs
         $(SHISHUSTUFF_PATH)/HTCStuff/camlibs/libalign_exiv2.so:system/priv-app/HTCCamera/lib/arm/libalign_exiv2.so\
@@ -128,14 +138,6 @@ ifeq ($(WITH_BOOT_HTC_STUFF),true)
         $(SHISHUSTUFF_PATH)/HTCStuff/libgifdecoder2.so:system/lib/libgifdecoder2.so\
         $(SHISHUSTUFF_PATH)/HTCStuff/libexif_lib1_v09.so:system/lib/libexif_lib1_v09.so\
         $(SHISHUSTUFF_PATH)/HTCStuff/libexif_lib1_jni_v09.so:system/lib/libexif_lib1_jni_v09.so
-else
-    #Call all the replaced packages just in case.
-    PRODUCT_PACKAGES += \
-        Snap \
-        SnapdragonCamera \
-        MotCamera \
-        Gallery2 \
-        SnapdragonGallery
 endif
 
 ## Check the music part.
