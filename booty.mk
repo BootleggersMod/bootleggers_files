@@ -36,7 +36,7 @@ ifeq ($(WITH_BOOT_HTC_STUFF),true)
         HTCCamera \
         HTCEditor \
         HTCGallery \
-        HTCVideoPlayer \
+        HTCVideoPlayer
         
     PRODUCT_COPY_FILES += \
         #Copying camera libs
