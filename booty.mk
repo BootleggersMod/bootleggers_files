@@ -33,7 +33,7 @@ ifeq ($(WITH_BOOT_HTC_STUFF),true)
         HTCCamera \
         HTCEditor \
         HTCGallery \
-        HTCVideoPlayer
+        HTCVideo
 else
     #Call all the replaced packages just in case.
     PRODUCT_PACKAGES += \
