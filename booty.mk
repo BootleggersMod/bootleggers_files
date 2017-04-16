@@ -1,11 +1,38 @@
-# Shishu Sounds directory
+## Shishu Makefile. Done without Knowledge. 2017.
+
+## Define automatically all the shishu stuff.
+
+ifndef WITH_BOOT_HTC_STUFF
+    WITH_BOOT_HTC_STUFF := true
+endif
+
+ifndef WITH_BOOT_MUSIC
+    WITH_BOOT_MUSIC := true
+endif
+
+ifndef WITH_BOOT_FM
+    WITH_BOOT_FM := true
+endif
+
+ifndef WITH_BOOT_BROWSER
+    WITH_BOOT_BROWSER := true
+endif
+
+ifndef WITH_BOOT_CLOCK
+    WITH_BOOT_CLOCK := true
+endif
+
+# Shishu Stuff directory
 SHISHUSTUFF_PATH := vendor/bootleggers/prebuilt
 
 # OmniClock 
+ifeq ($(WITH_BOOT_CLOCK),true)
 PRODUCT_COPY_FILES += \
     vendor/bootleggers/stuff/omniclock.apk:system/app/OmniClock/OmniClock.apk
+endif
 
-# HTC Camera (hope this works)
+# HTC Camera
+ifeq ($(WITH_BOOT_HTC_STUFF),true)
 PRODUCT_COPY_FILES += \
     $(SHISHUSTUFF_PATH)/HTCStuff/htccamera.apk:system/priv-app/HTCCamera/HTCCamera.apk\
     $(SHISHUSTUFF_PATH)/HTCStuff/camlibs/libalign_exiv2.so:system/priv-app/HTCCamera/lib/arm/libalign_exiv2.so\
@@ -39,8 +66,10 @@ PRODUCT_COPY_FILES += \
     $(SHISHUSTUFF_PATH)/HTCStuff/camlibs/libsecuritysdk-1.0.13.so:system/priv-app/HTCCamera/lib/arm/libsecuritysdk-1.0.13.so\
     $(SHISHUSTUFF_PATH)/HTCStuff/camlibs/libtbb.so:system/priv-app/HTCCamera/lib/arm/libtbb.so\
     $(SHISHUSTUFF_PATH)/HTCStuff/camlibs/libtbdecode.so:system/priv-app/HTCCamera/lib/arm/libtbdecode.so
-    
+endif
+
 # HTC Editor
+ifeq ($(WITH_BOOT_HTC_STUFF),true)
 PRODUCT_COPY_FILES += \
     $(SHISHUSTUFF_PATH)/HTCStuff/htceditor.apk:system/priv-app/HTCEditor/HTCEditor.apk\
     $(SHISHUSTUFF_PATH)/HTCStuff/editlibs/libalDE_SDE_TWO.so:system/priv-app/HTCEditor/lib/arm/libalDE_SDE_TWO.so\
@@ -80,8 +109,10 @@ PRODUCT_COPY_FILES += \
     $(SHISHUSTUFF_PATH)/HTCStuff/editlibs/libmorpho_jpeg_io.so:system/priv-app/HTCEditor/lib/arm/libmorpho_jpeg_io.so\
     $(SHISHUSTUFF_PATH)/HTCStuff/editlibs/libmorpho_memory_allocator.so:system/priv-app/HTCEditor/lib/arm/libmorpho_memory_allocator.so\
     $(SHISHUSTUFF_PATH)/HTCStuff/editlibs/libopencv_porting.so:system/priv-app/HTCEditor/lib/arm/libopencv_porting.so
+endif
 
 # HTC Gallery
+ifeq ($(WITH_BOOT_HTC_STUFF),true)
 PRODUCT_COPY_FILES += \
     $(SHISHUSTUFF_PATH)/HTCStuff/htcgallery.apk:system/priv-app/HTCGallery/HTCGallery.apk\
     $(SHISHUSTUFF_PATH)/HTCStuff/gallibs/libexif2.so:system/priv-app/HTCGallery/lib/arm/libexif2.so\
@@ -93,27 +124,36 @@ PRODUCT_COPY_FILES += \
     $(SHISHUSTUFF_PATH)/HTCStuff/gallibs/libimage_feature.so:system/priv-app/HTCGallery/lib/arm/libimage_feature.so\
     $(SHISHUSTUFF_PATH)/HTCStuff/gallibs/libomron_common.so:system/priv-app/HTCGallery/lib/arm/libomron_common.so\
     $(SHISHUSTUFF_PATH)/HTCStuff/gallibs/libvima.so:system/priv-app/HTCGallery/lib/arm/libvima.so
+endif
 
 # HTC Video
+ifeq ($(WITH_BOOT_HTC_STUFF),true)
 PRODUCT_COPY_FILES += \
     $(SHISHUSTUFF_PATH)/HTCStuff/htcvideo.apk:system/priv-app/HTCVideoPlayer/HTCVideoPlayer.apk 
+endif
 
 # HTC Libs
+ifeq ($(WITH_BOOT_HTC_STUFF),true)
 PRODUCT_COPY_FILES += \
     $(SHISHUSTUFF_PATH)/HTCStuff/libbv_panodata_hdk_v6.so:system/lib/libbv_panodata_hdk_v6.so\
     $(SHISHUSTUFF_PATH)/HTCStuff/libgifdecoder.so:system/lib/libgifdecoder.so\
     $(SHISHUSTUFF_PATH)/HTCStuff/libgifdecoder2.so:system/lib/libgifdecoder2.so\
     $(SHISHUSTUFF_PATH)/HTCStuff/libexif_lib1_v09.so:system/lib/libexif_lib1_v09.so\
     $(SHISHUSTUFF_PATH)/HTCStuff/libexif_lib1_jni_v09.so:system/lib/libexif_lib1_jni_v09.so
+endif
 
 # Timber
+ifeq ($(WITH_BOOT_MUSIC),true)
 PRODUCT_COPY_FILES += \
     $(SHISHUSTUFF_PATH)/Music/timber.apk:system/app/Timber/Timber.apk
+endif
 
 
 # Amaze FM
+ifeq ($(WITH_BOOT_FM),true)
 PRODUCT_COPY_FILES += \
     $(SHISHUSTUFF_PATH)/FileBrowser/amaze.apk:system/app/Amaze/Amaze.apk
+endif
 
 # Permissions MOD, etc part.
 PRODUCT_COPY_FILES += \
