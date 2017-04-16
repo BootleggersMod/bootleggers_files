@@ -29,10 +29,10 @@ endif
 # Shishu Stuff directory
 SHISHUSTUFF_PATH := vendor/bootleggers/prebuilt
 
-# OmniClock 
+# OmniClock
 ifeq ($(WITH_BOOT_CLOCK),true)
 PRODUCT_COPY_FILES += \
-    $(SHISHUSTUFF_PATH)/Clock/omniclock.apk:system/app/OmniClock/OmniClock.apk
+    $(SHISHUSTUFF_PATH)/Clock/OmniClock.apk:system/app/OmniClock/OmniClock.apk
 endif
 
 # HTC Camera
@@ -133,7 +133,7 @@ endif
 # HTC Video
 ifeq ($(WITH_BOOT_HTC_STUFF),true)
 PRODUCT_COPY_FILES += \
-    $(SHISHUSTUFF_PATH)/HTCStuff/htcvideo.apk:system/priv-app/HTCVideoPlayer/HTCVideoPlayer.apk 
+    $(SHISHUSTUFF_PATH)/HTCStuff/htcvideo.apk:system/priv-app/HTCVideoPlayer/HTCVideoPlayer.apk
 endif
 
 # HTC Libs
@@ -149,19 +149,19 @@ endif
 # Timber
 ifeq ($(WITH_BOOT_MUSIC),true)
 PRODUCT_COPY_FILES += \
-    $(SHISHUSTUFF_PATH)/Music/timber.apk:system/app/Timber/Timber.apk
+    $(SHISHUSTUFF_PATH)/Music/RetroMusic.apk:system/app/RetroMusic/RetroMusic.apk
 endif
 
 
 # Amaze FM
 ifeq ($(WITH_BOOT_FM),true)
 PRODUCT_COPY_FILES += \
-    $(SHISHUSTUFF_PATH)/FileBrowser/amaze.apk:system/app/Amaze/Amaze.apk
+    $(SHISHUSTUFF_PATH)/FileBrowser/MKExplorer.apk:system/app/MKExplorer/MKExplorer.apk
 endif
 
 ifeq ($(WITH_BOOT_CLOCK),true)
 PRODUCT_COPY_FILES += \
-    $(SHISHUSTUFF_PATH)/Browser/Chromium.apk:system/app/Chromium/Chromium.apk
+    $(SHISHUSTUFF_PATH)/Browser/RocketBrowser.apk:system/app/RocketBrowser/RocketBrowser.apk
 endif
 
 # Permissions MOD, etc part.
@@ -241,30 +241,7 @@ PRODUCT_COPY_FILES += \
     $(SHISHUSTUFF_PATH)/Permissions/Framework/semc_audioeffectif.jar:system/framework/semc_audioeffectif.jar\
     $(SHISHUSTUFF_PATH)/Permissions/Framework/SemcGenericUxpRes/SemcGenericUxpRes.apk:system/framework/SemcGenericUxpRes/SemcGenericUxpRes.apk
 
-# Ringtone files
-PRODUCT_COPY_FILES += \
-    $(SHISHUSTUFF_PATH)/Sounds/Frost.ogg:system/media/audio/ringtones/Frost.ogg \
-    $(SHISHUSTUFF_PATH)/Sounds/Beauty_pub.ogg:system/media/audio/ringtones/Beauty_pub.ogg \
-    $(SHISHUSTUFF_PATH)/Sounds/OutOfMind.ogg:system/media/audio/ringtones/OutOfMind.ogg \
-    $(SHISHUSTUFF_PATH)/Sounds/Myst.ogg:system/media/audio/ringtones/Myst.ogg
-    
-# Notifications files
-PRODUCT_COPY_FILES += \
-    $(SHISHUSTUFF_PATH)/Sounds/Nights.ogg:system/media/audio/notifications/Nights.ogg \
-    $(SHISHUSTUFF_PATH)/Sounds/Button.ogg:system/media/audio/notifications/Button.ogg \
-    $(SHISHUSTUFF_PATH)/Sounds/Chimes.wav:system/media/audio/notifications/Chimes.wav \
-    $(SHISHUSTUFF_PATH)/Sounds/CyanMail.ogg:system/media/audio/notifications/CyanMail.ogg \
-    $(SHISHUSTUFF_PATH)/Sounds/CyanMessage.ogg:system/media/audio/notifications/CyanMessage.ogg \
-    $(SHISHUSTUFF_PATH)/Sounds/Redmond.wav:system/media/audio/notifications/Redmond.wav \
-    $(SHISHUSTUFF_PATH)/Sounds/Talitha.ogg:system/media/audio/notifications/Talitha.ogg
-    
-    
-# Alarms files
-PRODUCT_COPY_FILES += \
-    $(SHISHUSTUFF_PATH)/Sounds/LikeWhat.ogg:system/media/audio/alarms/LikeWhat.ogg \
-    $(SHISHUSTUFF_PATH)/Sounds/Shadow.ogg:system/media/audio/alarms/Shadow.ogg
-
-ifeq ($(WITH_BOOT_HTC_STUFF),true)
+ifeq ($(WITH_BOOT_SHISHUP),true)
 PRODUCT_COPY_FILES += \
     $(SHISHUSTUFF_PATH)/Shishu/ShishuWalls.apk:system/app/ShishuWalls/ShishuWalls.apk\
     $(SHISHUSTUFF_PATH)/Shishu/Aidonnou-Headers.apk:system/app/Aidonnou-Headers/Aidonnou-Headers.apk\
@@ -273,7 +250,32 @@ else
 PRODUCT_COPY_FILES += \
     $(SHISHUSTUFF_PATH)/Shishu/AboutShishu.apk:system/app/AboutShishu/AboutShishu.apk
 endif
-    
+
+# Ringtone files
+PRODUCT_COPY_FILES += \
+    $(SHISHUSTUFF_PATH)/Sounds/Frost.ogg:system/media/audio/ringtones/Frost.ogg \
+    $(SHISHUSTUFF_PATH)/Sounds/Beauty_pub.ogg:system/media/audio/ringtones/Beauty_pub.ogg \
+    $(SHISHUSTUFF_PATH)/Sounds/OutOfMind.ogg:system/media/audio/ringtones/OutOfMind.ogg \
+    $(SHISHUSTUFF_PATH)/Sounds/Resurrection_Ringtone2.mp3:system/media/audio/ringtones/Resurrection_Ringtone2.mp3 \
+    $(SHISHUSTUFF_PATH)/Sounds/Myst.ogg:system/media/audio/ringtones/Myst.ogg
+
+# Notifications files
+PRODUCT_COPY_FILES += \
+    $(SHISHUSTUFF_PATH)/Sounds/Nights.ogg:system/media/audio/notifications/Nights.ogg \
+    $(SHISHUSTUFF_PATH)/Sounds/Button.ogg:system/media/audio/notifications/Button.ogg \
+    $(SHISHUSTUFF_PATH)/Sounds/Chimes.wav:system/media/audio/notifications/Chimes.wav \
+    $(SHISHUSTUFF_PATH)/Sounds/CyanMail.ogg:system/media/audio/notifications/CyanMail.ogg \
+    $(SHISHUSTUFF_PATH)/Sounds/CyanMessage.ogg:system/media/audio/notifications/CyanMessage.ogg \
+    $(SHISHUSTUFF_PATH)/Sounds/omni_notification1.ogg:system/media/audio/notifications/omni_notification1.ogg \
+    $(SHISHUSTUFF_PATH)/Sounds/Redmond.wav:system/media/audio/notifications/Redmond.wav \
+    $(SHISHUSTUFF_PATH)/Sounds/Talitha.ogg:system/media/audio/notifications/Talitha.ogg
+
+
+# Alarms files
+PRODUCT_COPY_FILES += \
+    $(SHISHUSTUFF_PATH)/Sounds/LikeWhat.ogg:system/media/audio/alarms/LikeWhat.ogg \
+    $(SHISHUSTUFF_PATH)/Sounds/Shadow.ogg:system/media/audio/alarms/Shadow.ogg
+
 #Set the new custom sounds
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.ringtone=Frost.ogg \
