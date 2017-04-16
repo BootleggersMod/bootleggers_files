@@ -245,6 +245,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(SHISHUSTUFF_PATH)/Sounds/Frost.ogg:system/media/audio/ringtones/Frost.ogg \
     $(SHISHUSTUFF_PATH)/Sounds/Beauty_pub.ogg:system/media/audio/ringtones/Beauty_pub.ogg \
+    $(SHISHUSTUFF_PATH)/Sounds/OutOfMind.ogg:system/media/audio/ringtones/OutOfMind.ogg \
     $(SHISHUSTUFF_PATH)/Sounds/Myst.ogg:system/media/audio/ringtones/Myst.ogg
     
 # Notifications files
