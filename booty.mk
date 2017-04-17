@@ -22,8 +22,8 @@ ifndef WITH_BOOT_CLOCK
     WITH_BOOT_CLOCK := true
 endif
 
-ifndef WITH_BOOT_SHISHUP
-    WITH_BOOT_SHISHUP := false
+ifndef WITH_BOOT_SHISHUCUSPI
+    WITH_BOOT_SHISHUCUSPI := true
 endif
 
 # Shishu Stuff directory
@@ -241,14 +241,14 @@ PRODUCT_COPY_FILES += \
     $(SHISHUSTUFF_PATH)/Permissions/Framework/semc_audioeffectif.jar:system/framework/semc_audioeffectif.jar\
     $(SHISHUSTUFF_PATH)/Permissions/Framework/SemcGenericUxpRes/SemcGenericUxpRes.apk:system/framework/SemcGenericUxpRes/SemcGenericUxpRes.apk
 
-ifeq ($(WITH_BOOT_SHISHUP),true)
+ifeq ($(WITH_BOOT_SHISHUCUSPI),true)
+PRODUCT_COPY_FILES += \
+    $(SHISHUSTUFF_PATH)/Shishu/AboutShishu.apk:system/app/AboutShishu/AboutShishu.apk
+else
 PRODUCT_COPY_FILES += \
     $(SHISHUSTUFF_PATH)/Shishu/ShishuWalls.apk:system/app/ShishuWalls/ShishuWalls.apk\
     $(SHISHUSTUFF_PATH)/Shishu/Aidonnou-Headers.apk:system/app/Aidonnou-Headers/Aidonnou-Headers.apk\
     $(SHISHUSTUFF_PATH)/Shishu/About-Shishu.apk:system/app/AboutShishu/AboutShishu.apk
-else
-PRODUCT_COPY_FILES += \
-    $(SHISHUSTUFF_PATH)/Shishu/AboutShishu.apk:system/app/AboutShishu/AboutShishu.apk
 endif
 
 # Ringtone files
