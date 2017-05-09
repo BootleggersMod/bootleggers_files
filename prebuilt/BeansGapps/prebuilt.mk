@@ -14,7 +14,7 @@
 
 # Prebuilt Packages
 PRODUCT_PACKAGES += \
-    LatinIMEGooglePrebuilt
+    LatinIMEG
 
 # Include package overlays
 PRODUCT_PACKAGE_OVERLAYS += \

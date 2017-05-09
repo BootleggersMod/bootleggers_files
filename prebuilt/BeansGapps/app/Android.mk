@@ -15,9 +15,9 @@
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := LatinIMEGooglePrebuilt
+LOCAL_MODULE := LatinIMEG
 LOCAL_MODULE_TAGS := optional
-LOCAL_SRC_FILES := LatinIMEGooglePrebuilt/arm/LatinIMEGooglePrebuilt/LatinIMEGooglePrebuilt.apk
+LOCAL_SRC_FILES := LatinIMEG/arm/LatinIMEG/LatinIMEG.apk
 LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_MODULE_CLASS := APPS
 LOCAL_OVERRIDES_PACKAGES := LatinIME
