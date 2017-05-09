@@ -291,3 +291,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.ringtone=Frost.ogg \
     ro.config.notification_sound=Nights.ogg \
     ro.config.alarm_alert=LikeWhat.ogg
+
+#Adding the prebuilt gapps stuff
+include vendor/bootleggers/prebuilt/BeansGapps/prebuilt.mk
