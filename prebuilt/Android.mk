@@ -23,6 +23,7 @@ LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_TAGS := optional
 LOCAL_CERTIFICATE := platform
 LOCAL_PRIVILEGED_MODULE := true
+LOCAL_OVERRIDES_PACKAGES := Camera Camera2 Snap SnapdragonCamera MotCamera
 LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
 include $(BUILD_PREBUILT)
 
@@ -35,6 +36,7 @@ LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_TAGS := optional
 LOCAL_CERTIFICATE := platform
 LOCAL_PRIVILEGED_MODULE := true
+LOCAL_OVERRIDES_PACKAGES := Gallery Gallery2 SnapdragonGallery 
 LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
 include $(BUILD_PREBUILT)
 
@@ -73,6 +75,7 @@ LOCAL_SRC_FILES := Music/$(LOCAL_MODULE).apk
 LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_TAGS := optional
 LOCAL_CERTIFICATE := platform
+LOCAL_OVERRIDES_PACKAGES := Music SnapdragonMusic crDroidMusic Phonograph Eleven
 include $(BUILD_PREBUILT)
 
 #FileManager App
@@ -83,16 +86,18 @@ LOCAL_SRC_FILES := FileManager/$(LOCAL_MODULE).apk
 LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_TAGS := optional
 LOCAL_CERTIFICATE := platform
+LOCAL_OVERRIDES_PACKAGES := CMFileManager Amaze AmazeFM crDroidFileManager
 include $(BUILD_PREBUILT)
 
 #Browser App
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := RetroBrowser
+LOCAL_MODULE := RocketBrowser
 LOCAL_SRC_FILES := Browser/$(LOCAL_MODULE).apk
 LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_TAGS := optional
 LOCAL_CERTIFICATE := platform
+LOCAL_OVERRIDES_PACKAGES := Browser Browser2 Jelly ViaBrowser
 include $(BUILD_PREBUILT)
 
 #Clock App
@@ -103,6 +108,7 @@ LOCAL_SRC_FILES := Clock/$(LOCAL_MODULE).apk
 LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_TAGS := optional
 LOCAL_CERTIFICATE := platform
+LOCAL_OVERRIDES_PACKAGES := DeskClock OmniClock
 include $(BUILD_PREBUILT)
 
 #Launcher App
@@ -113,6 +119,7 @@ LOCAL_SRC_FILES := Launcher/$(LOCAL_MODULE).apk
 LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_TAGS := optional
 LOCAL_CERTIFICATE := platform
+LOCAL_OVERRIDES_PACKAGES := Launcher2 Launcher3 Trebuchet PixelLauncher
 include $(BUILD_PREBUILT)
 
 ##Shishu Apps
