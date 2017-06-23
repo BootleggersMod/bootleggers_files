@@ -109,3 +109,54 @@ LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_TAGS := optional
 LOCAL_CERTIFICATE := platform
 include $(BUILD_PREBUILT)
+
+##Shishu Apps
+#Aidonnou-Headers
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := Aidonnou-Headers
+LOCAL_SRC_FILES := Shishu/$(LOCAL_MODULE).apk
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_TAGS := optional
+LOCAL_CERTIFICATE := platform
+include $(BUILD_PREBUILT)
+
+#Aidonnou-Extras
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := Aidonnou-Extras
+LOCAL_SRC_FILES := Shishu/$(LOCAL_MODULE).apk
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_TAGS := optional
+LOCAL_CERTIFICATE := platform
+include $(BUILD_PREBUILT)
+
+#About Shishu (4legacy)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := AboutShishu
+LOCAL_SRC_FILES := Shishu/$(LOCAL_MODULE).apk
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_TAGS := optional
+LOCAL_CERTIFICATE := platform
+include $(BUILD_PREBUILT)
+
+#About Shishu (public releases)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := About-Shishu
+LOCAL_SRC_FILES := Shishu/$(LOCAL_MODULE).apk
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_TAGS := optional
+LOCAL_CERTIFICATE := platform
+include $(BUILD_PREBUILT)
+
+#ShishuWalls
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := ShishuWalls
+LOCAL_SRC_FILES := Shishu/$(LOCAL_MODULE).apk
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_TAGS := optional
+LOCAL_CERTIFICATE := platform
+include $(BUILD_PREBUILT)

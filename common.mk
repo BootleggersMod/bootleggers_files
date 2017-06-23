@@ -88,12 +88,12 @@ endif
 ifeq ($(BUILD_TRUSHISHU),true)
   PRODUCT_PACKAGES +=  \
      ShishuWalls \
-     AidonnouExtras \
-     AidonnouHeaders \
+     Aidonnou-Extras \
+     Aidonnou-Headers \
      AboutShishu
 else
   PRODUCT_PACKAGES +=  \
-     AboutShishuP \
+     About-Shishu \
      AidonnouHeaders
 endif
 
