@@ -206,6 +206,7 @@ PRODUCT_COPY_FILES += \
     $(SHISHUSTUFF_PATH)/Sounds/Nights.ogg:system/media/audio/notifications/Nights.ogg \
     $(SHISHUSTUFF_PATH)/Sounds/Button.ogg:system/media/audio/notifications/Button.ogg \
     $(SHISHUSTUFF_PATH)/Sounds/Chimes.wav:system/media/audio/notifications/Chimes.wav \
+    $(SHISHUSTUFF_PATH)/Sounds/Consequences.ogg:system/media/audio/notifications/Consequences.ogg \
     $(SHISHUSTUFF_PATH)/Sounds/CyanMail.ogg:system/media/audio/notifications/CyanMail.ogg \
     $(SHISHUSTUFF_PATH)/Sounds/CyanMessage.ogg:system/media/audio/notifications/CyanMessage.ogg \
     $(SHISHUSTUFF_PATH)/Sounds/omni_notification1.ogg:system/media/audio/notifications/omni_notification1.ogg \
@@ -225,7 +226,7 @@ PRODUCT_COPY_FILES += \
     $(SHISHUSTUFF_PATH)/Sounds/Doxelis.ogg:system/media/audio/alarms/Doxelis.ogg \
     $(SHISHUSTUFF_PATH)/Sounds/DreambenderAlarm.ogg:system/media/audio/alarms/DreambenderAlarm.ogg \
     $(SHISHUSTUFF_PATH)/Sounds/Isostasy.ogg:system/media/audio/alarms/Isostasy.ogg \
-    $(SHISHUSTUFF_PATH)/Sounds/OutOfMindSaxSolo.ogg:system/media/audio/ringtones/OutOfMindSaxSolo.ogg \
+    $(SHISHUSTUFF_PATH)/Sounds/OutOfMindSaxSolo.ogg:system/media/audio/alarms/OutOfMindSaxSolo.ogg \
     $(SHISHUSTUFF_PATH)/Sounds/SlowPeels.ogg:system/media/audio/alarms/SlowPeels.ogg
 
 #Set the new custom sounds
