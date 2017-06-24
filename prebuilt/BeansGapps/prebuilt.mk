@@ -18,7 +18,7 @@ PRODUCT_PACKAGES += \
 
 # Include package overlays
 PRODUCT_PACKAGE_OVERLAYS += \
-    vendor/bootleggers/prebuilt/BeansGapps/overlay/
+    vendor/shishu/prebuilt/BeansGapps/overlay/
 
 # build.prop entrys
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -31,12 +31,12 @@ PRODUCT_PACKAGES += \
 
 #telephony blobs
 PRODUCT_COPY_FILES += \
-    vendor/bootleggers/prebuilt/BeansGapps/etc/permissions/com.google.android.dialer.support.xml:system/etc/permissions/com.google.android.dialer.support.xml
+    vendor/shishu/prebuilt/BeansGapps/etc/permissions/com.google.android.dialer.support.xml:system/etc/permissions/com.google.android.dialer.support.xml
 
 # Facelock lib
 ifeq ($(TARGET_ARCH),arm)
 PRODUCT_COPY_FILES += \
-    vendor/bootleggers/prebuilt/BeansGapps/vendor/lib/libfrsdk.so:system/vendor/lib/libfrsdk.so
+    vendor/shishu/prebuilt/BeansGapps/vendor/lib/libfrsdk.so:system/vendor/lib/libfrsdk.so
 endif
 
 # AOSP Keyboard libs
@@ -46,7 +46,7 @@ PRODUCT_PACKAGES += \
 
 ifeq ($(TARGET_ARCH),arm)
 PRODUCT_COPY_FILES += \
-    vendor/bootleggers/prebuilt/BeansGapps/lib/libjni_latinime.so:system/lib/libjni_latinime.so \
-    vendor/bootleggers/prebuilt/BeansGapps/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
+    vendor/shishu/prebuilt/BeansGapps/lib/libjni_latinime.so:system/lib/libjni_latinime.so \
+    vendor/shishu/prebuilt/BeansGapps/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
 endif
 
