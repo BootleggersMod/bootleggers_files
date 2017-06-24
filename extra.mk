@@ -186,7 +186,7 @@ endif
 
 #Adding the prebuilt gapps stuff if it's a LT build so it's more fun
 ifeq ($(BUILD_TRUSHISHU),true)
-include vendor/bootleggers/prebuilt/BeansGapps/prebuilt.mk
+include vendor/shishu/prebuilt/BeansGapps/prebuilt.mk
 endif
 
 # Ringtone files
