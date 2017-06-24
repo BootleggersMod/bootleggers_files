@@ -97,4 +97,8 @@ else
      AidonnouHeaders
 endif
 
+#Add a extra overlay folder just for the wallpaper
+PRODUCT_PACKAGE_OVERLAYS += vendor/shishu/overlay/common
+
+#Include extras makefile to copy more stuff
 include vendor/shishu/extra.mk
